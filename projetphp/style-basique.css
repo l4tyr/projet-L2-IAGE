@@ -1,0 +1,162 @@
+:root {
+    --bg: #f7f7f7;
+    --fg: #222;
+    --primary: #2563eb;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+}  
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.site-header nav {
+    margin-top: 8px;
+}
+
+.site-header nav a {
+    margin-right: 12px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    margin-top: 40px;
+    padding: 16px;
+    background: white;
+    border-top: 1px solid #ddd;
+    color: var(--muted);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 12px;
+    background: var(--primary);
+    color: rgb(251, 248, 248);
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    width: 200%;
+    height: 180%;
+    background: rgba(255, 255, 255, 0.403);
+    border-radius: 40%;
+    transition: top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.button:hover::before {
+    top: -50%;
+    transform: rotate(10deg);
+}
+
+.button.secondary {
+    background: #555;
+}
+
+
+.button.danger {
+    background: #dc2626;
+}
+
+.button+.button {
+    margin-left: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #e5e7eb;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #fafafa;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.alert.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.alert.error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
